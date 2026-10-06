@@ -1,7 +1,19 @@
+import { Route, Routes } from 'react-router-dom'
+import Layout from './components/Layout'
+import Home from './pages/Home'
+import Placeholder from './pages/Placeholder'
+
 export default function App() {
   return (
-    <div className="min-h-screen bg-green-50 flex items-center justify-center">
-      <h1 className="text-3xl font-bold text-green-800">Sahayak AI – सहायक</h1>
-    </div>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/chat" element={<Placeholder title="Chat" />} />
+        <Route path="/topics" element={<Placeholder title="Topics" />} />
+        <Route path="/profile" element={<Placeholder title="Profile" />} />
+        <Route path="/admin" element={<Placeholder title="Admin dashboard" />} />
+        <Route path="/login" element={<Placeholder title="Login" />} />
+      </Route>
+    </Routes>
   )
 }
