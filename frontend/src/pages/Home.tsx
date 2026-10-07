@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import BackendStatus from '../components/BackendStatus'
 
 const features = [
   ['Ask in English or हिन्दी', 'Write in simple words and get answers in your chosen language.'],
@@ -30,6 +31,9 @@ export default function Home() {
           <Link to="/topics" className="rounded-lg border-2 border-green-700 px-5 py-2.5 font-bold text-green-700">
             Browse topics
           </Link>
+        </div>
+        <div className="mt-4">
+          <BackendStatus />
         </div>
       </section>
 
